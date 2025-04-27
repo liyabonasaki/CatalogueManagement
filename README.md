@@ -11,18 +11,18 @@ This solution is split into two Spring Boot services:
 - **Management Service**: Exposes a REST API to manage books.
 - **Web UI Service** (optional, if you're planning): Connects via JAX-RS Client and renders a web interface.
 
-This repository contains the **Management Service** with Swagger documentation and Docker support.
+This repository contains the **Management Service** and Docker support.
 
 ---
 
 ## 🛠️ Tech Stack
 
 - Java 17
-- Spring Boot 2
+- Spring Boot 3
 - Maven
 - H2 In-Memory Database
 - Docker
-- Swagger (Springfox)
+- Swagger API Documentation 
 
 ---
 
@@ -57,3 +57,18 @@ This repository contains the **Management Service** with Swagger documentation a
 2. **Run the application:**
    ```bash
       java -jar target/CatalogueManagement-0.0.1-SNAPSHOT.jar
+
+### Running with Maven
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/liyabonasaki/CatalogueManagement.git
+   cd CatalogueManagement
+
+2. **Build and run the project**
+   ```bash
+   mvn spring-boot:run
+
+## Accessing the API using Swagger
+Open your browser and go to http://localhost:8080/swagger-ui/index.html#/
+
+![img.png](img.png)
