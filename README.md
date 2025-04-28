@@ -40,13 +40,17 @@ This repository contains the **Management Service** and Docker support.
 
 ### 🐳 Docker (Recommended)
 
-1. **Build the Docker image:**
+1. **Create the Docker network for both services:**
+   ```bash
+   docker network create catalogue-network
+
+2. **Build the Docker image:**
    ```bash
    docker build -t catalogue-management .
 
-2. **Run the Docker image:**
+3. **Run the Docker image inside the network:**
    ```bash
-   docker run -p 8080:8080 catalogue-management
+   docker run -d --name cataloguemanagement --network catalogue-network -p 8080:8080 catalogue-management
 
 ### 🧪 Running Locally (without Docker)
 
