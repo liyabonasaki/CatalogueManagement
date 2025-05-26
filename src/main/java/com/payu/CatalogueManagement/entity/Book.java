@@ -20,6 +20,18 @@ public class Book {
     @Enumerated(EnumType.STRING)
     private BookType bookType;
 
+    public Book(){
+
+    }
+    public Book(Long id, String name, String isbnNumber, LocalDate now, double price, BookType ebook) {
+        this.id = id;
+        this.name = name;
+        this.isbnNumber = isbnNumber;
+        this.publishDate = now;
+        this.price = price;
+        this.bookType = ebook;
+    }
+
 
     public Long getId() {
         return id;
